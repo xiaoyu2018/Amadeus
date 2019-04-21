@@ -1,0 +1,2 @@
+# Amadeus
+A ridiculous AI
