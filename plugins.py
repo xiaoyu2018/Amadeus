@@ -14,6 +14,9 @@ def basictalk(msg):
     if msg[0] == '你':
         flag = 1
         msg = '我'+msg[1:]
+    if "再见" in msg:
+        flag=1
+        msg='再见，我爱你~'
     if flag == 0:
         return '不知道你在讲什么!'
     return msg
@@ -29,5 +32,5 @@ def calculator(msg):
     return str(eval(expression))   #eval是内置的求值函数
 #测试单元
 if __name__ == "__main__":
-    a = '计算  132*123'
-    print(calculator(a))
+    a = '再见'
+    print(basictalk(a))
