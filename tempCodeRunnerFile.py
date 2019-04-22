@@ -1,0 +1,1 @@
+print(ctx['sender']['user_id'])

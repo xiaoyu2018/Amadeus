@@ -1,36 +1,64 @@
+"""
+插件
+"""
 from math import *
+import random
+import requests
+from controls import on_command, previlage
+superuser = {861900161,925582364}  # 超级用户
 
 
-#基础的聊天功能
-def basictalk(msg):
-    flag = 0
-    msg=msg.strip()
-    if'吗' in msg or '?' in msg or '？' in msg:
-        flag = 1
-        msg = msg.replace('?', '')
-        msg = msg.replace('吗', '')
-        msg = msg.replace('？', '')
-        msg += '!'
-    if msg[0] == '你':
-        flag = 1
-        msg = '我'+msg[1:]
-    if "再见" in msg:
-        flag=1
-        msg='再见，我爱你~'
-    if flag == 0:
-        return '不知道你在讲什么!'
-    return msg
 
-#复读机
-def echo(msg):
-    msg = msg.replace('复读', '')
-    return msg.lstrip()
 
-#计算器
-def calculator(msg):
-    expression=msg[len('计算'):].strip()
-    return str(eval(expression))   #eval是内置的求值函数
-#测试单元
-if __name__ == "__main__":
-    a = '再见'
-    print(basictalk(a))
+@on_command('复读')
+def echo(bot, ctx, arg):
+    if previlage(superuser, ctx):
+        return previlage(superuser, ctx)
+    arg = arg.lstrip()
+    if not arg:
+        return {'reply': '空格要怎么复读？'}
+    bot.send(ctx, arg)
+
+
+@on_command('喵一个')
+def miao(bot, ctx, arg):
+    bot.send(ctx, '喵～')
+
+
+@on_command('随机数')
+def _(bot, ctx, arg):
+    bot.send(ctx, str(random.randint(0, 100)))
+
+
+@on_command('计算')
+def _(bot, ctx, arg):
+    expression = arg.strip()
+    print(expression)
+    bot.send(ctx, str(eval(expression)))
+
+
+@on_command('知乎日报')
+def _(bot, ctx, arg):
+    STORY_URL_FORMAT = 'https://daily.zhihu.com/story/{}'
+
+    resp = requests.get(
+        'https://news-at.zhihu.com/api/4/news/latest',
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+        }
+    )
+
+    data = resp.json()
+    stories = data.get('stories')
+
+    if not stories:
+        bot.send(ctx, '暂时没有数据，或者服务无法访问')
+        return
+
+    reply = ''
+    for story in stories:
+        url = STORY_URL_FORMAT.format(story['id'])
+        title = story.get('title', '未知内容')
+        reply += f'\n{title}\n{url}\n'
+
+    bot.send(ctx, reply)
