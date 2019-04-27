@@ -8,7 +8,7 @@ from typing import List
 
 import requests
 
-API_KEY = 'b8f7acea2c1d42c39550a1e6b7633e95'
+API_KEY = ''
 
 
 def get_reply(msg: str, unique_id: str = '') -> List[str]:
