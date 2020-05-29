@@ -1,2 +1,3 @@
 # Amadeus
-A ridiculous AI
+> python
+
