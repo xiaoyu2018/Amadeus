@@ -12,7 +12,7 @@ plugin_config = Config(**global_config.dict())
 scheduler = require("nonebot_plugin_apscheduler").scheduler  # type:AsyncIOScheduler
 
 # 发送时间
-times=[{"hour":5,"min":30},{"hour":13,"min":8}]
+times=[{"hour":5,"min":30}]
 async def send_everyday():
     message1="早上好,群友们"
     message2="别忘上工程伦理！！！"
