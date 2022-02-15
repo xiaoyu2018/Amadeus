@@ -1,4 +1,4 @@
-cq\data\
-cq\logs\
-cq\session.token
-cq\device.json
+cq/data/
+cq/logs/
+cq/session.token
+cq/device.json
