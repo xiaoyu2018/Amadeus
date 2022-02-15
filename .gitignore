@@ -1,6 +1,5 @@
-*.i
-*.ii
-*.gpu
-*.ptx
-*.cubin
-*.fatbin
+cq\data\
+cq\logs\
+cq\session.token
+cq\device.json
+
