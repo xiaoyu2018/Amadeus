@@ -12,7 +12,7 @@ plugin_config = Config(**global_config.dict())
 scheduler = require("nonebot_plugin_apscheduler").scheduler  # type:AsyncIOScheduler
 
 # 发送时间
-times=[{"hour":5,"min":30}]
+times=[{"hour":5,"min":30},{"hour":12,"min":1}]
 async def send_everyday():
     message1="早上好,群友们"
     message2="别忘上工程伦理！！！"
@@ -22,7 +22,7 @@ async def send_everyday():
         await nonebot.get_bot().send_private_msg(user_id=qq, message="")
     # 给群发消息
     for qq_group in plugin_config.npd_qq_groups:
-        await nonebot.get_bot().send_group_msg(group_id=qq_group, message=message1)
+        # await nonebot.get_bot().send_group_msg(group_id=qq_group, message=message1)
         await nonebot.get_bot().send_group_msg(group_id=qq_group, message="[CQ:at,qq={}]{}".format(861900161, message2))
 
 # 调试
