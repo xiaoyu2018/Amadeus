@@ -1,4 +1,4 @@
-from nonebot import get_driver, on_command, on_message,rule
+from nonebot import get_driver, on_command, on_message
 from nonebot.params import EventPlainText,CommandArg
 from nonebot.matcher import Matcher
 from nonebot.adapters.onebot.v11 import Message,MessageSegment
@@ -9,7 +9,7 @@ global_config = get_driver().config
 plugin_config = Config(**global_config.dict())
 
 matcher1=on_message(priority=3)
-matcher2=on_command("记忆",aliases={"lrn"},rule=rule.to_me(),priority=2)
+matcher2=on_command("记忆",aliases={"ln"},priority=2)
 
 @matcher1.handle()
 async def basic_chat(matcher: Matcher,msg: str = EventPlainText()):
@@ -36,6 +36,8 @@ async def save_data(path:str,data:dict):
     with open(path,"w",encoding="utf-8") as f:
         for i in data.keys():
             f.write(i+" "+data[i]+"\n")
+
+    # 在服务器备份chatdata，防止部署新版本时丢失文件
     try:
         with open("/root/bot/chat_data.txt.bak","w",encoding="utf-8") as f:
             for i in data.keys():
