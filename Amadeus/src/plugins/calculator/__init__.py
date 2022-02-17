@@ -25,7 +25,10 @@ async def calculate(matcher: Matcher,msg: Message = CommandArg()):
     await matcher.finish(res)
     
 def is_safe(msg):
-    stop_words=["import","os","sys","system"]
+    stop_words=[
+        "import","os","sys","system","on_command","matcher",
+        "CommandArg","Message","MessageSegment","Matcher"
+    ]
     
     for i in stop_words:
         if i in msg:
