@@ -28,9 +28,7 @@ async def Add_Data(matcher: Matcher,msg: Message = CommandArg()):
     
     await save_data(plugin_config.bc_data_path,chat_data)
     matcher.stop_propagation()
-    await matcher.finish(message=Message.template(
-        "边人记住了{}"
-    ).format(MessageSegment.face(16)))
+    await matcher.finish("边人记住了"+Message(MessageSegment.face(16)))
 
 async def save_data(path:str,data:dict):
     with open(path,"w",encoding="utf-8") as f:

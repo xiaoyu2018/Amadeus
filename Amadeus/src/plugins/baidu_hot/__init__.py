@@ -9,7 +9,7 @@ matcher=on_command("热搜",aliases={"hot"},priority=2)
 async def calculate(matcher: Matcher):
     matcher.stop_propagation()
     titles =await get_content()
-    await matcher.send("====百度热搜榜Top15====")
+    await matcher.send("====百度热搜榜Top30====")
     res=""
     for i in range(30):
         res+=Message(f"{i+1}. {titles[i]}\n")
