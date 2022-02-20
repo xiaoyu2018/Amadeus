@@ -9,7 +9,7 @@ async def get_content():
     req=requests
 
     res=req.get(url=URL,headers=HEADERS)
-    tree=etree.HTML(res.text)
+    tree=etree.HTML(res.text,None)
     titles=tree.xpath('/html/body/div/div/main/div[2]/div/div[2]/div/div[2]/a/div[1]/text()')
     # links=tree.xpath('/html/body/div/div/main/div[2]/div/div[2]/div/div[2]/a/@href ')
 
