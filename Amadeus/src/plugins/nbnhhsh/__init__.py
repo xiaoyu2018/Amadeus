@@ -18,7 +18,7 @@ async def Require(text):
     return res.json()
     
 
-mathcer.handle()
+@mathcer.handle()
 async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
     matcher.stop_propagation()
     l=await Require(msg)
