@@ -6,7 +6,7 @@ from .spider import get_content
 matcher=on_command("热搜",aliases={"hot"},priority=2)
 
 @matcher.handle()
-async def calculate(matcher: Matcher):
+async def PushAnswer(matcher: Matcher):
     matcher.stop_propagation()
     titles =await get_content()
     await matcher.send("====百度热搜榜Top30====")
