@@ -16,7 +16,7 @@ async def Require(text):
     res=req.post(url=URL,data={"text":f"{text}"})
 
     return res.json()
-    
+
 
 @mathcer.handle()
 async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
