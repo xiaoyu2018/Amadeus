@@ -2,7 +2,7 @@
 name = "Amadeus"
 version = "0.1.0"
 description = "Amadeus"
-authors = [Xavier]
+authors = ["Xavier"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
