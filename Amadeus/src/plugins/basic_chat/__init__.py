@@ -1,4 +1,4 @@
-from nonebot import get_driver, on_command, on_message
+from nonebot import  on_command, on_message
 from nonebot.params import CommandArg,EventMessage
 from nonebot.matcher import Matcher
 from nonebot.adapters.onebot.v11 import Message,MessageSegment
@@ -9,6 +9,9 @@ data_path=join(expanduser('~'),"bot\chat_data.txt")
 
 matcher1=on_message(priority=3)
 matcher2=on_command("记忆",aliases={"ln"},priority=2)
+matcher3=on_command("遗忘",aliases={"fgt"},priority=2)
+
+
 
 @matcher1.handle()
 async def basic_chat(matcher: Matcher,msg: Message = EventMessage()):
@@ -31,6 +34,20 @@ async def add_data(matcher: Matcher,msg: Message = CommandArg()):
     await save_data(data_path,chat_data)
     matcher.stop_propagation()
     await matcher.finish("边人记住了"+Message(MessageSegment.face(16)))
+
+
+@matcher3.handle()
+async def add_data(matcher: Matcher,msg: Message = CommandArg()):
+    chat_data=load_data(data_path)
+    s_msg=str(msg).split(" ")
+    # print(s_msg.split(" "))
+    if(s_msg[0] in chat_data.keys()):
+        chat_data.pop(s_msg[0])
+    
+    await save_data(data_path,chat_data)
+    matcher.stop_propagation()
+    await matcher.finish("边人忘记了"+Message(MessageSegment.face(39)))
+
 
 async def save_data(path:str,data:dict):
     with open(path,"w",encoding="utf-8") as f:
