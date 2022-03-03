@@ -12,16 +12,16 @@
     <img src="https://raw.githubusercontent.com/xiaoyu2018/Best-README-Template/master/images/1.png" width="360" height="360">
   </a>
 
-  <h3 align="center">Amadeus</h3>
+  <h3 align="center"><font size="6">Amadeus</font></h3>
 
   <p align="center">
-    One qqbot based on [nonebot2](https://github.com/nonebot/nonebot2) and [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)！
+    One qqbot based on <a href="https://github.com/nonebot/nonebot2"> nonebot2 </a> and <a href="https://github.com/Mrs4s/go-cqhttp" >go-cqhttp</a>！
     <br />
     <br />
   </p>
 </div>
 
----
+
 <!-- 修改url -->
 <div align="center">
   <a href="https://github.com/xiaoyu2018/Amadeus/graphs/contributors">
@@ -34,7 +34,6 @@
     <img src="https://img.shields.io/github/license/xiaoyu2018/Amadeus.svg?style=for-the-badge">
   </a>  
 </div>
-<br />
 <br />
 
 ---
