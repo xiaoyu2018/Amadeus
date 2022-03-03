@@ -5,7 +5,7 @@ from nonebot.adapters.onebot.v11 import Message,MessageSegment
 from os.path import expanduser,join
 
 
-data_path=join(expanduser('~'),"bot\chat_data.txt")
+data_path=join(expanduser('~'),"bot/chat_data.txt")
 
 matcher1=on_message(priority=3)
 matcher2=on_command("记忆",aliases={"ln"},priority=2)
