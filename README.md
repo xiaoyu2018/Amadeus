@@ -1,18 +1,7 @@
 <div id="top"></div>
 
 
-<!-- 修改url -->
-<div align="center">
-  <a href="https://github.com/xiaoyu2018/Amadeus/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/xiaoyu2018/Amadeus.svg?style=for-the-badge">
-  </a>  
-  <a href="https://github.com/xiaoyu2018/Amadeus/stargazers">
-    <img src="https://img.shields.io/github/stars/xiaoyu2018/Amadeus.svg?style=for-the-badge">
-  </a>  
-  <a href="https://github.com/xiaoyu2018/Amadeus/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/xiaoyu2018/Amadeus.svg?style=for-the-badge">
-  </a>  
-</div>
+
 
 
 
@@ -26,12 +15,27 @@
   <h3 align="center">Amadeus</h3>
 
   <p align="center">
-    One qqbot based on NoneBot2！
-    <br />
+    One qqbot based on [nonebot2](https://github.com/nonebot/nonebot2) and [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)！
     <br />
     <br />
   </p>
 </div>
+
+---
+<!-- 修改url -->
+<div align="center">
+  <a href="https://github.com/xiaoyu2018/Amadeus/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/xiaoyu2018/Amadeus.svg?style=for-the-badge">
+  </a>  
+  <a href="https://github.com/xiaoyu2018/Amadeus/stargazers">
+    <img src="https://img.shields.io/github/stars/xiaoyu2018/Amadeus.svg?style=for-the-badge">
+  </a>  
+  <a href="https://github.com/xiaoyu2018/Amadeus/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/xiaoyu2018/Amadeus.svg?style=for-the-badge">
+  </a>  
+</div>
+<br />
+<br />
 
 ---
 
