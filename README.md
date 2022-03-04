@@ -92,7 +92,7 @@ Amadeus目前实现了以下几个插件：
 ## Acknowledgments
 + <a href="https://github.com/nonebot/nonebot2"> NoneBotv2 </a>：NoneBot2 是一个现代、跨平台、可扩展的 Python 聊天机器人框架，它基于 Python 的类型注解和异步特性，能够为你的需求实现提供便捷灵活的支持。
 + <a href="https://github.com/nonebot/nonebot2"> go-cqhttp </a>：cqhttp的golang实现，轻量、原生跨平台，go-cqhttp 兼容 OneBot-v11 绝大多数内容，并在其基础上做了一些扩展。
-+ <a href="https://lab.magiconch.com/api/nbnhhsh/guess"> 能不能好好说话？ </a>：拼音首字母缩写释义工具
++ <a href="https://lab.magiconch.com/nbnhhsh/"> 能不能好好说话？ </a>：拼音首字母缩写释义工具
 + <a href="https://top.baidu.com/board?tab=realtime"> 百度热搜 </a>：百度热搜榜
 
 <p align="right">(<a href="#top">back to top</a>)</p>
