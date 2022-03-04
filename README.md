@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/xiaoyu2018/Amadeus">
-    <img src="https://raw.githubusercontent.com/xiaoyu2018/Best-README-Template/master/images/1.png" width="360" height="360">
+    <img src="https://raw.githubusercontent.com/xiaoyu2018/Best-README-Template/master/images/1.png" width="260" height="260">
   </a>
 
   <h3 align="center"><font size="6">Amadeus</font></h3>
@@ -64,25 +64,21 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的golang实现   **go-cqhttp** 编写的自用qq聊天机器人。  
+项目目前仍在积极建设中...
 
-
-
-### Built With
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
-
-
-
-### Prerequisites
-
-
-
-### Installation
+0. 在安装本项目之前，强烈建议你创建一个新的pyhton虚拟环境，并且请确保你的 Python 版本 >= 3.7.3，此外如果你之前安装过nonebot1，请在安装 NoneBot v2 之前卸载 NoneBot v1。
+1. 在新创建的python环境中安装<a href="./requirements.txt" >requestment</a>中提供的全部依赖
+    ```python
+    pip install -r requirements.txt
+    ```
+    完成这一步之后，你便已经安装好了nonebot2框架、驱动器（FastAPI）、适配器（OneBot V11）以及现有插件所需的其他所有依赖。
+2. 在 .env.dev 中更改配置信息
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
