@@ -1,10 +1,6 @@
 <div id="top"></div>
 
 
-
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -44,16 +40,9 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -78,19 +67,33 @@ Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的g
     pip install -r requirements.txt
     ```
     完成这一步之后，你便已经安装好了nonebot2框架、驱动器（FastAPI）、适配器（OneBot V11）以及现有插件所需的其他所有依赖。
-2. 在 .env.dev 中更改配置信息
+2. 修改 .env.dev.bak 文件名为 .env.dev ，在.env.dev中更改配置信息并记录PORT
+3. 在<a href="https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.0.0-rc1" >这里</a>下载go-cqhttp，并参照<a href="https://docs.go-cqhttp.org/guide/quick_start.html#%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B" >文档</a>使用go-cqhttp进行反向代理，于配置文件 config.yml 反向ws设置中`universal: ws://127.0.0.1:PORT/onebot/v11/ws`（PORT与 .env.dev 中PORT保持一致）
+4. 运行go-cqhttp
+5. 在Amadeus目录下运行bot
+    ```python
+    nb run
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
-
+Amadeus目前实现了以下几个插件：  
+1. 爬取百度热搜榜前三十
+2. 聊天调教
+3. 字母缩写含义查询
+4. 计算器
+5. 每日提醒
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
++ <a href="https://github.com/nonebot/nonebot2"> NoneBotv2 </a>：NoneBot2 是一个现代、跨平台、可扩展的 Python 聊天机器人框架，它基于 Python 的类型注解和异步特性，能够为你的需求实现提供便捷灵活的支持。
++ <a href="https://github.com/nonebot/nonebot2"> go-cqhttp </a>：cqhttp的golang实现，轻量、原生跨平台，go-cqhttp 兼容 OneBot-v11 绝大多数内容，并在其基础上做了一些扩展。
++ <a href="https://lab.magiconch.com/api/nbnhhsh/guess"> 能不能好好说话？ </a>：拼音首字母缩写释义工具
++ <a href="https://top.baidu.com/board?tab=realtime"> 百度热搜 </a>：百度热搜榜
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
