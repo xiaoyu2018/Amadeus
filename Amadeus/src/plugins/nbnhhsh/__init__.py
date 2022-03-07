@@ -1,27 +1,20 @@
+import sys
+sys.path.append("/root/bot/Amadeus/src/")
 
 from nonebot import on_command
 from nonebot.matcher import Matcher
 from nonebot.adapters.onebot.v11 import Message,MessageSegment
 from nonebot.params import CommandArg
 
-URL="https://lab.magiconch.com/api/nbnhhsh/guess"
 
-mathcer=on_command("缩写",priority=2)
+from shared.spider import GetJson
 
-
-async def Require(text):
-    import requests
-    
-    req=requests
-    res=req.post(url=URL,data={"text":f"{text}"})
-
-    return res.json()
-
+mathcer=on_command("缩写",aliases={"sx"},priority=2)
 
 @mathcer.handle()
 async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
     matcher.stop_propagation()
-    l=await Require(msg)
+    l=await GetJson("https://lab.magiconch.com/api/nbnhhsh/guess","post",data={"text":f"{msg}"})
     res=""
     for d in l:
         res+=Message(f"====={d['name']}=====\n")
@@ -31,11 +24,8 @@ async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
             res+=Message("啥意思啊？我不道啊！")
     
     await matcher.finish(res)
-    
-
 
 
 if __name__=='__main__':
-    # l=Require("asdada")
-    # print(foo(l))
+    
     pass

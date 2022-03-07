@@ -14,7 +14,7 @@ scheduler = require("nonebot_plugin_apscheduler").scheduler  # type:AsyncIOSched
 # 发送时间
 times=[{"hour":7,"min":30},{"hour":12,"min":1}]
 async def send_everyday():
-    
+    message1="早上好,群友们"
     message2="别忘上工程伦理！！！"
 
      # 给qq好友发消息

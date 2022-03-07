@@ -84,6 +84,7 @@ Amadeus目前实现了以下几个插件：
 3. 字母缩写含义查询
 4. 计算器
 5. 每日提醒
+6. 有道翻译
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -94,6 +95,7 @@ Amadeus目前实现了以下几个插件：
 + <a href="https://github.com/nonebot/nonebot2"> go-cqhttp </a>：cqhttp的golang实现，轻量、原生跨平台，go-cqhttp 兼容 OneBot-v11 绝大多数内容，并在其基础上做了一些扩展。
 + <a href="https://lab.magiconch.com/nbnhhsh/"> 能不能好好说话？ </a>：拼音首字母缩写释义工具
 + <a href="https://top.baidu.com/board?tab=realtime"> 百度热搜 </a>：百度热搜榜
++ <a href="https://www.youdao.com/"> 有道 </a>：有道翻译
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
