@@ -20,10 +20,12 @@ async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
     
     l1=await spider.ParsePage(page_text,"/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div/p/text()")
     l2=await spider.ParsePage(page_text,"/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/ul/li/text()")
-    l3=await spider.ParsePage(page_text,"/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div/div/p[2]/text()")
+    l3=await spider.ParsePage(page_text,"/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div[@id='ydTrans']/div/div/p[2]/text()")
     l4=await spider.ParsePage(page_text,"/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/ul/p/span/a/text()")
     answers.extend(l1+l2+l3+l4)
-
+    
+    if(not answers):
+        await matcher.finish(Message("说的是人话吗"+MessageSegment.face(14)))
     res=""
     res+=Message(f"原词（句）：{msg}\n\n结果=========\n")
 
