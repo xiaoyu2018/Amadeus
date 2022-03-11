@@ -78,14 +78,17 @@ Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的g
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
-Amadeus目前实现了以下几个插件：  
-1. 爬取百度热搜榜前三十
-2. 聊天调教
-3. 字母缩写含义查询
-4. 计算器
-5. 每日提醒
-6. 有道翻译
++ Amadeus目前实现了以下几个插件：  
+  1. 爬取百度热搜榜前三十
+  2. 聊天调教
+  3. 字母缩写含义查询
+  4. 计算器
+  5. 每日提醒
+  6. 有道翻译
 
++ 以下功能需要其他插件支持，请自行安装：
+  1. 定时任务 <a href="https://github.com/nonebot/plugin-apscheduler"> nonebot_plugin_apscheduler </a>
+  2. 在线运行代码 <a href="https://github.com/yzyyz1387/nonebot_plugin_code"> nonebot_plugin_code </a>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
