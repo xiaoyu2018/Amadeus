@@ -1,5 +1,7 @@
 import sys
-sys.path.append("/root/bot/Amadeus/src/")
+import os
+path=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(path)
 from shared import spider
 
 from nonebot import on_command
