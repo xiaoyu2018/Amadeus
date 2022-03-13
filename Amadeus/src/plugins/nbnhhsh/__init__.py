@@ -1,6 +1,6 @@
 import sys
 import os
-path=os.path.dirname(os.path.dirname(__file__))
+path=os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(path)
 
 from nonebot import on_command

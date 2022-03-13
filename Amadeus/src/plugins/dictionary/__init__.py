@@ -1,6 +1,6 @@
 import sys
 import os
-path=os.path.dirname(os.path.dirname(__file__))
+path=os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(path)
 from shared import spider
 
@@ -36,8 +36,9 @@ async def PushAnswer(matcher: Matcher,msg: Message = CommandArg()):
         if(i=='' or (i[0]=="[" and i[len(i)-1]=="]")):
             continue
         res+=Message(i+"\n")
- 
-    await matcher.finish(res)
+    
+    
+    await matcher.finish(str(res))
     
 
 if __name__=='__main__':
