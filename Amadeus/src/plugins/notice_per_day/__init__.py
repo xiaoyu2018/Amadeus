@@ -1,4 +1,3 @@
-from email import message
 import nonebot
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from nonebot import require
