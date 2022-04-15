@@ -54,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的golang实现   **go-cqhttp** 编写的自用qq聊天机器人。  
-项目目前仍在积极建设中...
+项目仍在建设中...
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

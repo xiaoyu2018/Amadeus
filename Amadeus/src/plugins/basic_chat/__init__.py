@@ -7,7 +7,7 @@ from os.path import expanduser,join
 
 data_path=join(expanduser('~'),"bot/chat_data.txt")
 
-matcher1=on_message(priority=10)
+matcher1=on_message(priority=99)
 matcher2=on_command("记忆",aliases={"ln"},priority=2)
 matcher3=on_command("遗忘",aliases={"fgt"},priority=2)
 
