@@ -54,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的golang实现   **go-cqhttp** 编写的自用qq聊天机器人。  
-项目仍在建设中...
+项目仍在持续建设中...
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -66,7 +66,7 @@ Amadeus是一个基于异步机器人框架 **nonebot2** 和OneBot-v11协议的g
     ```python
     pip install -r requirements.txt
     ```
-    完成这一步之后，你便已经安装好了nonebot2框架、驱动器（FastAPI）、适配器（OneBot V11）以及现有插件所需的其他所有依赖。
+    完成这一步之后，你便成功安装了nonebot2框架、驱动器（FastAPI）、适配器（OneBot V11）以及现有插件所需的其他所有依赖。
 2. 修改 .env.dev.bak 文件名为 .env.dev ，在.env.dev中更改配置信息并记录PORT
 3. 在<a href="https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.0.0-rc1" >这里</a>下载go-cqhttp，并参照<a href="https://docs.go-cqhttp.org/guide/quick_start.html#%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B" >文档</a>使用go-cqhttp进行反向代理，于配置文件 config.yml 反向ws设置中`universal: ws://127.0.0.1:PORT/onebot/v11/ws`（PORT与 .env.dev 中PORT保持一致）
 4. 运行go-cqhttp
