@@ -11,7 +11,7 @@
   <h3 align="center"><font size="6">Amadeus</font></h3>
 
   <p align="center">
-    One qqbot based on <a href="https://github.com/nonebot/nonebot2"> nonebot2 </a> and <a href="https://github.com/Mrs4s/go-cqhttp" >go-cqhttp</a>！
+    My qqbot based on <a href="https://github.com/nonebot/nonebot2"> nonebot2 </a> and <a href="https://github.com/Mrs4s/go-cqhttp" >go-cqhttp</a>！
     <br />
     <br />
   </p>
